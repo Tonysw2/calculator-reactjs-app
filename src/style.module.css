@@ -1,0 +1,93 @@
+/********** GENERAL ***********/
+.calculator {
+    background-color: #212529;
+    /* center content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    /* border */
+    border-radius: 15px;
+    box-shadow: 0 0px 30px rgba(0, 0, 0, 0.3);
+}
+
+/********** DISPLAY ***********/
+.display-wrap {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+
+    min-height: 9.6rem;
+    padding-top: 1rem;
+    width: 100%;
+    text-align: end;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.prev-display {
+    padding: 1.2rem 2.4rem 0 0;
+    font-size: 1.8rem !important;
+    color: #f1f3f570;
+}
+
+.display {
+    padding: 1.2rem 2.4rem 0 0;
+    font-size: 4.8rem;
+}
+
+/********** BUTTONS ***********/
+.btn-wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: repeat(5, 80px);
+    align-items: center;
+    justify-items: center;
+}
+
+.btn-wrap button {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: lowercase;
+    height: 100%;
+    width: 100%;
+
+    border: none;
+    color: #f1f3f5;
+    background-color: transparent;
+    font-size: 2.4rem;
+}
+
+.btn-wrap button:hover,
+.btn-wrap button:active {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 3.2rem;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+.btn-wrap .btn-operator {
+    text-transform: lowercase;
+    color: #f08c00;
+}
+
+/* HELPER */
+.border-radius-btm--left {
+    border-radius: 0 0 0 15px;
+}
+
+.border-radius-btm--right {
+    border-radius: 0 0 15px 0;
+}
+
+.equal {
+    grid-column: 3 / -1;
+    grid-row: 5 / -1;
+}
+
+.btn-delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
